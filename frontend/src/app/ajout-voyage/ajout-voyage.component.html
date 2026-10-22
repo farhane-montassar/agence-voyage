@@ -1,0 +1,44 @@
+<h2>Ajouter un voyage</h2>
+
+<form [formGroup]="formVoyage" (ngSubmit)="submit()">
+
+  <div class="mb-3">
+    <label for="titre">Titre</label>
+    <input id="titre" formControlName="titre" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="prix">Prix</label>
+    <input id="prix" type="number" formControlName="prix" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="duree">Durée</label>
+    <input id="duree" type="number" formControlName="duree" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="dateDepart">Date départ</label>
+    <input id="dateDepart" type="date" formControlName="dateDepart" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description" class="form-control"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="destination">Destination</label>
+    <select id="destination" formControlName="destination" class="form-control">
+      <option value="">Choisir une destination</option>
+     <option *ngFor="let d of listDestination" [value]="d.id">
+  {{ d.nom }} - {{ d.pays }}
+</option>
+    </select>
+  </div>
+
+ <button type="submit" class="btn btn-success">
+  Ajouter
+</button>
+ 
+</form>

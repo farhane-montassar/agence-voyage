@@ -1,0 +1,57 @@
+<h2 class="mb-4">Liste des destinations</h2>
+
+<table class="table table-bordered table-striped">
+
+  <thead>
+
+    <tr>
+
+      <th>Nom</th>
+      <th>Pays</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Actions</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let d of listDestination">
+
+      <td>{{ d.nom }}</td>
+
+      <td>{{ d.pays }}</td>
+
+      <td>{{ d.description }}</td>
+
+     <td>
+  <img
+  [src]="d.image"
+  [alt]="d.nom"
+  [title]="d.nom"
+  class="destination-img">
+</td>
+
+      <td>
+
+        <button
+  class="btn btn-danger btn-sm me-2"
+  (click)="deleteDestination(d.id || d._id)">
+  Delete
+</button>
+
+        <button
+  class="btn btn-warning btn-sm"
+  [routerLink]="['/edit-destination', d.id || d._id]">
+  Edit
+</button>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+</table>

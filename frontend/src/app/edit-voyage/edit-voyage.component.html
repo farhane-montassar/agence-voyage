@@ -1,0 +1,102 @@
+<h2 class="mb-4">Modifier voyage</h2>
+
+<form [formGroup]="formVoyage" (ngSubmit)="submit()">
+
+  <div class="mb-3">
+
+    <label for="titre">Titre</label>
+
+    <input
+      id="titre"
+      type="text"
+      placeholder="Titre voyage"
+      formControlName="titre"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="prix">Prix</label>
+
+    <input
+      id="prix"
+      type="number"
+      placeholder="Prix"
+      formControlName="prix"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="duree">Durée</label>
+
+    <input
+      id="duree"
+      type="number"
+      placeholder="Durée"
+      formControlName="duree"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="dateDepart">Date départ</label>
+
+    <input
+      id="dateDepart"
+      type="date"
+      formControlName="dateDepart"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="description">Description</label>
+
+    <textarea
+      id="description"
+      placeholder="Description voyage"
+      formControlName="description"
+      class="form-control">
+    </textarea>
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="destination">Destination</label>
+
+    <select
+      id="destination"
+      formControlName="destination"
+      class="form-control">
+
+      <option value="">
+        Choisir destination
+      </option>
+
+      <option
+        *ngFor="let d of listDestination"
+        [value]="d._id">
+
+        {{ d.nom }} - {{ d.pays }}
+
+      </option>
+
+    </select>
+
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-warning">
+
+    Modifier
+
+  </button>
+
+</form>

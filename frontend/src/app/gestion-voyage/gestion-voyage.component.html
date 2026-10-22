@@ -1,0 +1,40 @@
+<h2 class="mb-3">Liste des voyages</h2>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Prix</th>
+      <th>Durée</th>
+      <th>Date</th>
+      <th>Destination</th>
+      <th>Actions</th> <!-- ✅ ajouté -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let v of listVoyage">
+      <td>{{ v.titre }}</td>
+      <td>{{ v.prix }}</td>
+      <td>{{ v.duree }}</td>
+      <td>{{ v.dateDepart | date }}</td>
+      <td>{{ v.destination?.nom }}</td>
+
+      <!-- ✅ boutons -->
+      <td>
+  <button 
+  class="btn btn-warning btn-sm me-2"
+  [routerLink]="['/edit-voyage', v.id || v._id]">
+  Edit
+</button>
+
+  <button 
+    class="btn btn-danger btn-sm me-2"
+    (click)="deleteVoyage(v)">
+    Delete
+  </button>
+</td>
+
+    </tr>
+  </tbody>
+</table>

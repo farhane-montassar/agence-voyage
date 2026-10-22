@@ -1,0 +1,61 @@
+<h2 class="mb-4">Modifier destination</h2>
+
+<form [formGroup]="formDestination" (ngSubmit)="submit()">
+
+  <div class="mb-3">
+
+    <label for="nom">Nom</label>
+
+    <input
+      id="nom"
+      type="text"
+      formControlName="nom"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="pays">Pays</label>
+
+    <input
+      id="pays"
+      type="text"
+      formControlName="pays"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="description">Description</label>
+
+    <textarea
+      id="description"
+      formControlName="description"
+      class="form-control">
+    </textarea>
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="image">Image</label>
+
+    <input
+      id="image"
+      type="text"
+      formControlName="image"
+      class="form-control">
+
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-success">
+
+    Modifier
+
+  </button>
+
+</form>

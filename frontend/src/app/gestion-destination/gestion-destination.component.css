@@ -1,0 +1,55 @@
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+.table {
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+.table thead th {
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  font-size: 17px;
+}
+
+.table tbody td {
+  padding: 22px 20px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.table tbody tr:hover {
+  background: #eef6ff;
+}
+
+.destination-img {
+  width: 170px;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+.btn-danger {
+  background: #dc2626;
+  border: none;
+}
+
+.btn-warning {
+  background: #f59e0b;
+  color: white;
+  border: none;
+}

@@ -1,0 +1,67 @@
+<h2 class="mb-4">Ajouter destination</h2>
+
+<form
+  [formGroup]="formDestination"
+  (ngSubmit)="submit()">
+
+  <div class="mb-3">
+
+    <label for="nom">Nom</label>
+
+    <input
+      id="nom"
+      type="text"
+      placeholder="Nom destination"
+      formControlName="nom"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="pays">Pays</label>
+
+    <input
+      id="pays"
+      type="text"
+      placeholder="Pays"
+      formControlName="pays"
+      class="form-control">
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="description">Description</label>
+
+    <textarea
+      id="description"
+      placeholder="Description"
+      formControlName="description"
+      class="form-control">
+    </textarea>
+
+  </div>
+
+  <div class="mb-3">
+
+    <label for="image">Image</label>
+
+    <input
+      id="image"
+      type="text"
+      placeholder="image.jpg"
+      formControlName="image"
+      class="form-control">
+
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-success">
+
+    Ajouter
+
+  </button>
+
+</form>
